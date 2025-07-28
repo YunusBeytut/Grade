@@ -1,0 +1,50 @@
+.messages {
+  max-width: 500px;
+  margin: 40px auto;
+  background: #fff;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.09);
+}
+
+.message-box {
+  min-height: 120px;
+  background: #f2f4f8;
+  margin: 12px 0;
+  padding: 8px;
+  border-radius: 8px;
+  max-height: 250px;
+  overflow-y: auto;
+}
+
+.sent {
+  text-align: right;
+  color: #23294d;
+  margin: 5px 0;
+}
+
+.received {
+  text-align: left;
+  color: #3d3d3d;
+  margin: 5px 0;
+}
+
+.message-form {
+  display: flex;
+  gap: 6px;
+}
+
+.message-form input {
+  flex: 1;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #bbb;
+}
+
+.message-form button {
+  padding: 8px 18px;
+  border-radius: 8px;
+  background: #23294d;
+  color: #fff;
+  border: none;
+}

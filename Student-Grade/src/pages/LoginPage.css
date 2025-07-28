@@ -1,0 +1,7 @@
+.login-bg {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #23294d 0%, #5468ff 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
