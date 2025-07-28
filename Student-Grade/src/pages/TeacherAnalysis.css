@@ -1,0 +1,29 @@
+.teacher-analysis {
+  max-width: 800px;
+  margin: 40px auto;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(60, 60, 60, 0.08);
+  padding: 32px;
+}
+
+.course-block {
+  margin-bottom: 36px;
+}
+
+.teacher-analysis table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 14px;
+}
+
+.teacher-analysis th,
+.teacher-analysis td {
+  border: 1px solid #e2e2e2;
+  padding: 8px 12px;
+  text-align: center;
+}
+
+.teacher-analysis th {
+  background: #f0f3fa;
+}
