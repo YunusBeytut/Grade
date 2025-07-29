@@ -1,0 +1,694 @@
+body {
+    background: #eaf1fb;
+    margin: 0;
+}
+
+/* MODERN GLASS NAVBAR */
+.klas-navbar {
+    width: 100vw;
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    min-height: 76px;
+    background: linear-gradient(90deg, #313860 0%, #2563eb 100%);
+    box-shadow: 0 6px 32px #2563eb22, 0 1.5px 8px #6366f133;
+    backdrop-filter: blur(18px) saturate(190%);
+    -webkit-backdrop-filter: blur(18px) saturate(190%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.klas-navbar-inner {
+    width: 100%;
+    max-width: 1320px;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 76px;
+    border-radius: 24px;
+    background: rgba(255, 255, 255, 0.09);
+    box-shadow: 0 4px 18px #2563eb11;
+    border: 1.5px solid rgba(90, 120, 240, 0.11);
+    margin: 10px 14px 0 14px;
+}
+
+.klas-navbar-left {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.klas-navbar-logo {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #6366f1, #2563eb 65%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.1em;
+    color: #fff;
+    margin-right: 12px;
+    box-shadow: 0 2px 14px #2563eb44;
+    font-weight: 900;
+    letter-spacing: -2px;
+}
+
+.klas-navbar-title {
+    color: #fff;
+    font-size: 1.38rem;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    text-shadow: 0 2px 12px #2227;
+    transition: color 0.18s;
+}
+
+.klas-navbar-title b {
+    color: #ffe77a;
+    font-weight: 900;
+    letter-spacing: 0.5px;
+}
+
+.klas-navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.klas-navbar-announcements-btn {
+    background: rgba(255, 255, 255, 0.12);
+    color: #fff;
+    border: 2px solid rgba(255, 255, 255, 0.25);
+    border-radius: 14px;
+    font-size: 1.06rem;
+    font-weight: 600;
+    padding: 11px 24px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    outline: none;
+    letter-spacing: 0.3px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.klas-navbar-announcements-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.6s;
+}
+
+.klas-navbar-announcements-btn:hover {
+    background: rgba(255, 255, 255, 0.25);
+    border-color: rgba(255, 255, 255, 0.4);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(37, 99, 235, 0.3);
+}
+
+.klas-navbar-announcements-btn:hover::before {
+    left: 100%;
+}
+
+.klas-navbar-announcements-btn.active {
+    background: rgba(255, 255, 255, 0.95);
+    color: #2563eb;
+    border-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 6px 20px rgba(37, 99, 235, 0.4);
+    transform: translateY(-1px);
+}
+
+.klas-navbar-announcements-btn .btn-icon {
+    font-size: 1.1em;
+    filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.2));
+}
+
+.klas-navbar-logout-btn {
+    background: rgba(255, 255, 255, 0.93);
+    color: #2563eb;
+    border: none;
+    border-radius: 14px;
+    font-size: 1.08rem;
+    font-weight: 700;
+    padding: 12px 38px;
+    box-shadow: 0 2px 18px #6366f133, 0 1.5px 7px #2563eb09;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+    outline: none;
+    letter-spacing: 0.2px;
+}
+
+.klas-navbar-logout-btn:hover {
+    background: #2563eb;
+    color: #fff;
+    box-shadow: 0 6px 28px #2563eb3a;
+}
+
+.announcements-section {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(37, 99, 235, 0.1);
+    box-shadow: 0 4px 24px rgba(37, 99, 235, 0.1);
+    animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ORTA ANA KAPSAYICI */
+.dashboard-center-main {
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 46px 2vw 30px 2vw;
+    min-height: 100vh;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 46px;
+}
+
+/* MODERN GLASS KUTULARIN ORTAK STİLİ */
+.glass-box {
+    background: rgba(255, 255, 255, 0.68);
+    border-radius: 28px;
+    box-shadow: 0 8px 38px #2563eb23, 0 2px 12px #2563eb12;
+    border: 1.5px solid rgba(90, 120, 240, 0.12);
+    padding: 38px 44px 32px 44px;
+    margin: 0 auto;
+    width: 100%;
+    transition: box-shadow 0.19s, border 0.19s;
+}
+
+.glass-box:hover {
+    box-shadow: 0 14px 48px #2563eb29, 0 3px 16px #2563eb18;
+    border: 1.5px solid #2563eb33;
+}
+
+@media (max-width:900px) {
+    .glass-box {
+        padding: 18px 7vw 18px 7vw;
+        border-radius: 14px;
+    }
+}
+
+/* NOT EKLEME FORMU */
+.modern-form-section {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    width: 100%;
+}
+
+.modern-grade-form {
+    width: 100%;
+    max-width: 1000px;
+    min-height: 220px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.modern-grade-form h2 {
+    font-size: 1.38rem;
+    color: #2563eb;
+    margin-bottom: 30px;
+    font-weight: 800;
+    letter-spacing: -0.2px;
+}
+
+.modern-grade-form-row {
+    display: flex;
+    gap: 18px;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.modern-form-input,
+.modern-form-select {
+    padding: 17px 20px;
+    border-radius: 13px;
+    border: 1.5px solid #d1d5db;
+    font-size: 1.13em;
+    min-width: 165px;
+    background: #f3f6fb;
+    transition: border 0.2s;
+}
+
+.modern-form-input:focus,
+.modern-form-select:focus {
+    border: 1.5px solid #6366f1;
+    outline: none;
+}
+
+.modern-form-btn {
+    padding: 17px 36px;
+    background: linear-gradient(90deg, #6366f1, #2563eb 80%);
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.13em;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: 0 2px 10px #6366f11a;
+    transition: background 0.19s;
+}
+
+.modern-form-btn:hover {
+    background: #2563eb;
+}
+
+/* ÖĞRENCİ KARELERİ BÖLÜMÜ */
+.students-center-area {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    width: 100%;
+}
+
+.students-area-inner {
+    width: 100%;
+}
+
+.students-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 38px 52px;
+    width: 100%;
+}
+
+@media (max-width: 950px) {
+    .students-grid {
+        grid-template-columns: 1fr;
+        gap: 18px 0;
+    }
+}
+
+/* ÖĞRENCİ KARE */
+.student-big-card {
+    background: rgba(255, 255, 255, 0.83);
+    border-radius: 22px;
+    box-shadow: 0 4px 24px #2563eb1b;
+    padding: 28px 28px 22px 28px;
+    min-height: 220px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    border: 1.5px solid rgba(90, 120, 240, 0.12);
+    transition: box-shadow 0.19s, border 0.19s;
+}
+
+.student-big-card:hover {
+    box-shadow: 0 12px 42px #2563eb22, 0 3px 12px #2563eb18;
+    border: 1.5px solid #2563eb33;
+}
+
+.student-big-name {
+    font-size: 1.21em;
+    font-weight: 800;
+    color: #2563eb;
+    margin-bottom: 3px;
+    letter-spacing: -0.5px;
+}
+
+.student-big-mail {
+    font-size: 0.99em;
+    color: #6366f1;
+    margin-bottom: 10px;
+    font-weight: 500;
+    word-break: break-all;
+}
+
+.student-big-notlar {
+    margin-top: 5px;
+}
+
+.notlar-title {
+    font-size: 1.08em;
+    font-weight: 700;
+    color: #374151;
+    margin-bottom: 8px;
+}
+
+.student-no-grade {
+    color: #64748b;
+    font-size: 1.01em;
+    padding: 10px 0;
+}
+
+.student-notlar-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.notlar-row {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: rgba(245, 247, 255, 0.88);
+    border-radius: 9px;
+    padding: 7px 18px 7px 14px;
+    box-shadow: 0 1px 5px #2563eb0d;
+    font-size: 1.07em;
+}
+
+.notlar-ders {
+    color: #374151;
+    font-weight: 600;
+    width: 120px;
+    min-width: 90px;
+}
+
+.notlar-grade {
+    font-weight: 700;
+    border-radius: 7px;
+    padding: 5px 18px;
+    font-size: 1.08em;
+    margin-right: 7px;
+}
+
+.notlar-grade.passed {
+    background: #22c55e;
+    color: #fff;
+}
+
+.notlar-grade.failed {
+    background: #ef4444;
+    color: #fff;
+}
+
+.icon-btn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 1.13em;
+    margin-left: 2px;
+    transition: color 0.17s;
+    vertical-align: middle;
+}
+
+.icon-btn:hover {
+    color: #2563eb;
+}
+
+.edit-grade-input {
+    padding: 4px 8px;
+    border-radius: 6px;
+    border: 1.5px solid #d1d5db;
+    font-size: 1em;
+    margin-right: 4px;
+    width: 62px;
+}
+
+.edit-grade-btn {
+    background: #22c55e;
+    color: #fff;
+    border: none;
+    border-radius: 7px;
+    padding: 5px 14px;
+    font-size: 0.98em;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.edit-cancel-btn {
+    background: #d1d5db;
+    color: #374151;
+    border: none;
+    border-radius: 7px;
+    padding: 5px 14px;
+    font-size: 0.98em;
+    cursor: pointer;
+}
+
+/* İSTATİSTİKLER */
+.modern-stats-section {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.modern-stats-section h2 {
+    font-size: 1.18em;
+    color: #2563eb;
+    margin-bottom: 14px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+}
+
+.modern-stats-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 32px;
+}
+
+.modern-stats-box {
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 22px;
+    padding: 32px 0 20px 0;
+    text-align: center;
+    box-shadow: 0 2px 18px #2563eb16;
+    min-height: 112px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-top: 6px solid #2563eb;
+    border-bottom: 1.5px solid rgba(90, 120, 240, 0.12);
+    border-left: 1.5px solid rgba(90, 120, 240, 0.12);
+    border-right: 1.5px solid rgba(90, 120, 240, 0.12);
+    transition: box-shadow 0.18s, border 0.13s;
+}
+
+.modern-stats-label {
+    color: #2563eb;
+    font-size: 1.13em;
+    font-weight: 700;
+    margin-bottom: 2px;
+    letter-spacing: 0.2px;
+}
+
+.modern-stats-value {
+    font-size: 2.2em;
+    font-weight: 800;
+    margin-top: 7px;
+    color: #2563eb;
+    letter-spacing: 1px;
+}
+
+.modern-stats-value.passed {
+    color: #22c55e;
+}
+
+.modern-stats-value.failed {
+    color: #ef4444;
+}
+
+@media (max-width: 700px) {
+    .klas-navbar-inner {
+        padding: 0 2vw;
+        min-height: 54px;
+        margin: 4px 1vw 0 1vw;
+        border-radius: 10px;
+    }
+
+    .klas-navbar-title {
+        font-size: 1.02rem;
+    }
+
+    .klas-navbar-logo {
+        width: 28px;
+        height: 28px;
+        font-size: 1em;
+        margin-right: 7px;
+    }
+
+    .klas-navbar-right {
+        gap: 12px;
+    }
+
+    .klas-navbar-announcements-btn {
+        padding: 8px 16px;
+        font-size: 0.95rem;
+        border-radius: 10px;
+    }
+
+    .klas-navbar-logout-btn {
+        padding: 7px 14px;
+        font-size: 1em;
+        border-radius: 7px;
+    }
+
+    .glass-box {
+        padding: 12px 2vw;
+        border-radius: 10px;
+    }
+
+    .students-grid {
+        grid-template-columns: 1fr;
+        gap: 12px 0;
+    }
+
+    .student-big-card {
+        padding: 12px 7vw 10px 7vw;
+        min-height: 155px;
+        border-radius: 10px;
+    }
+
+    .modern-stats-row {
+        gap: 12px;
+    }
+
+    .modern-stats-box {
+        padding: 14px 0 10px 0;
+        border-radius: 10px;
+    }
+}
+
+.modern-stats-section {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.modern-stats-cards {
+    display: flex;
+    gap: 32px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 14px;
+}
+
+.modern-stats-card {
+    min-width: 210px;
+    min-height: 135px;
+    background: #fff;
+    border-radius: 22px;
+    box-shadow: 0 6px 30px #2563eb1b;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    padding: 28px 32px;
+    transition: transform 0.16s, box-shadow 0.15s;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.modern-stats-card:hover {
+    transform: translateY(-7px) scale(1.045);
+    box-shadow: 0 16px 44px #2563eb35;
+    z-index: 2;
+}
+
+.modern-stats-icon {
+    font-size: 2.7em;
+    font-weight: 800;
+    filter: drop-shadow(0 2px 7px #0001);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modern-stats-main {
+    font-size: 2.7em;
+    font-weight: 900;
+    color: #fff;
+    letter-spacing: 0.5px;
+    margin-bottom: 4px;
+    text-shadow: 0 2px 9px #0002;
+}
+
+.modern-stats-desc {
+    font-size: 1.08em;
+    font-weight: 600;
+    color: #fff;
+    opacity: 0.95;
+    letter-spacing: 0.4px;
+    text-shadow: 0 2px 9px #0002;
+}
+
+/* Kart gradient'leri */
+.gradient-blue {
+    background: linear-gradient(120deg, #2563eb 60%, #60a5fa 100%);
+}
+
+.gradient-green {
+    background: linear-gradient(120deg, #22c55e 60%, #bef264 100%);
+}
+
+.gradient-red {
+    background: linear-gradient(120deg, #ef4444 60%, #fca5a5 100%);
+}
+
+.gradient-yellow {
+    background: linear-gradient(120deg, #facc15 60%, #fef08a 100%);
+    color: #444;
+}
+
+.gradient-blue .modern-stats-main,
+.gradient-blue .modern-stats-desc,
+.gradient-green .modern-stats-main,
+.gradient-green .modern-stats-desc,
+.gradient-red .modern-stats-main,
+.gradient-red .modern-stats-desc {
+    color: #fff;
+}
+
+.gradient-yellow .modern-stats-main,
+.gradient-yellow .modern-stats-desc {
+    color: #856404;
+    text-shadow: 0 2px 6px #fff7;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .modern-stats-cards {
+        flex-direction: column;
+        gap: 16px;
+        align-items: stretch;
+    }
+
+    .modern-stats-card {
+        min-width: 0;
+        width: 100%;
+        padding: 22px 18px;
+    }
+
+    .modern-stats-main {
+        font-size: 2em;
+    }
+}
+
+.demo-banner {
+    background: #fff3cd;
+    color: #856404;
+    text-align: center;
+    padding: 14px 20px;
+    font-size: 1.02rem;
+    font-weight: 600;
+    border-bottom: 2px solid #ffeeba;
+    box-shadow: 0 2px 8px #00000010;
+    z-index: 45;
+    position: relative;
+}
