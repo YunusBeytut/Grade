@@ -1,12 +1,28 @@
-# React + Vite
+# 📚 Grade - Öğrenci Not Takip Sistemi
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react)
+![Firebase](https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript)
 
-Currently, two official plugins are available:
+Basit ve kullanışlı bir not yönetim uygulaması. Firebase ile veri depolama ve kimlik doğrulama özellikleri içerir.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🔥 Temel Özellikler
+- ✅ Kullanıcı girişi (Firebase Authentication)
+- 📝 Not ekleme/silme/güncelleme (CRUD)
+- 🔍 Derslere göre filtreleme
+- ⚡ Gerçek zamanlı veri senkronizasyonu (Firestore)
 
-## Expanding the ESLint configuration
+## 🛠 Teknik Yapı
+| Bileşen       | Teknoloji             |
+|---------------|-----------------------|
+| Frontend      | React (JavaScript)    |
+| Veritabanı    | Firebase Firestore    |
+| Kimlik Doğr. | Firebase Auth         |
+| Stil          | Vanilla CSS           |
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🚀 Kurulum
+1. Firebase projesi oluşturun:
+   - `src/firebase.js` dosyasını Firebase konfigürasyon bilgilerinizle güncelleyin
+2. Bağımlılıkları yükleyin:
+   ```bash
+   npm install
